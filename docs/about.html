@@ -8,110 +8,82 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="./img/icon.png" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+        rel="stylesheet" />
         <title>Basic - Bootstrap 4 with Gulp 4</title>
     </head>
     
     <body>
-        <div id="top-bar-wrap" class="clr">
-            <div id="top-bar" class="clr container">
-                <div id="top-bar-social" class="clr top-bar-right social-style-none">
-                    <ul id="top-bar-social-list" class="wpex-clr">
-                        <li> <a href="https://twitter.com/colorlib" title="Twitter" target="_blank"
-                            class="wpex-twitter wpex-social-btn wpex-social-btn-no-style"><span class="ticon ticon-twitter" aria-hidden="true"></span
-                ><span class="screen-reader-text">Twitter</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/colorlib"
-                title="Facebook"
-                target="_blank"
-                class="wpex-facebook wpex-social-btn wpex-social-btn-no-style"
-                ><span class="ticon ticon-facebook" aria-hidden="true"></span
-                ><span class="screen-reader-text">Facebook</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/colorlib/"
-                title="Instagram"
-                target="_blank"
-                class="wpex-instagram wpex-social-btn wpex-social-btn-no-style"
-                ><span class="ticon ticon-instagram" aria-hidden="true"></span
-                ><span class="screen-reader-text">Instagram</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/colorlib"
-                title="LinkedIn"
-                target="_blank"
-                class="wpex-linkedin wpex-social-btn wpex-social-btn-no-style"
-                ><span class="ticon ticon-linkedin" aria-hidden="true"></span
-                ><span class="screen-reader-text">LinkedIn</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/Colorlib"
-                title="Youtube"
-                target="_blank"
-                class="wpex-youtube wpex-social-btn wpex-social-btn-no-style"
-                ><span class="ticon ticon-youtube" aria-hidden="true"></span
-                ><span class="screen-reader-text">Youtube</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/colorlibhq/"
-                title="Github"
-                target="_blank"
-                class="wpex-github wpex-social-btn wpex-social-btn-no-style"
-                ><span class="ticon ticon-github" aria-hidden="true"></span
-                ><span class="screen-reader-text">Github</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="./index.html">Basic</a>
+        <div id="top-bar-wrap">
+            <div class="container">
+                <div id="top-bar" class="row">
+                    <div id="top-bar-content" class="top-bar-left ico-wrapper"> <span class="ico ico-phone"><span>(852) 3955 1230</span></span> <span class="ico ico-fax"><span>(852) 3565 01120</span></span>
+                    </div>
+                    <div id="top-bar-func" class="clr top-bar-right social-style-none">
+                        <!-- Actual search box -->
+                        <div class="form-group input-group-sm search-wrapper has-search"> <span class="ico-search form-control-feedback"><img src="../img/ico-magnifier.png" alt=""
+              /></span>
 
-                            <button class="navbar-toggler"
-                            type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+                            <input type="text" class="form-control search-ipt"
+                            placeholder="Search..." />
+                        </div>
+                        <div class="dropdown" id="language-switcher">
+                            <button class="btn btn-secondary dropdown-toggle custom-carets" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span>LANGUAGE:EN</span>
 
+                                <!-- <i class="fa fa-chevron-down"></i> -->
+                                <!-- <span class="ico-wrapper">
+                  <img src="../img/ico-arrow-down.png" alt="" />
+                </span> -->
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"> <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">LANGUAGE:EN</a>
  <a class="dropdown-item"
-                                        href="#">Another action</a>
- <a class="dropdown-item" href="#">Something else here</a>
+                                href="#">LANGUAGE:ZH</a>
 
                             </div>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="./about.html">About</a>
-
-                            </li>
-                            </ul>
+                        </div>
+                    </div>
                 </div>
-                </nav>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm navbar-light-custom">
+            <div class="container"> <a class="navbar-brand" href="./index.html">
+          <img id="logo" src="../img/logo-xcelom.png" alt="" />
+        </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="./index.html">HOME<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">PROFILE</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">OUR TEST</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">RESOURCES</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">MABIOUNI</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">CAREER</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">SUPPORT</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </body>
 
 </html>

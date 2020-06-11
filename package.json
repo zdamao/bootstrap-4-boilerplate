@@ -15,9 +15,11 @@
     "prod": "cross-env NODE_ENV=prod gulp"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.4.2",
     "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
     "cross-env": "^7.0.2",
+    "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",

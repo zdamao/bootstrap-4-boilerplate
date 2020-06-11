@@ -1,0 +1,29 @@
+// html,
+// body {
+//   font-size: $font-size-base;
+//   font-family: $font-family-base !important;
+// }
+html,
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "lucida grande", "lucida sans unicode", lucida, helvetica,
+  //   "Hiragino Sans GB", "MicrosoftYaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "华文细黑", "STXihei", "PingFang TC", "微软雅黑体",
+    "Microsoft YaHei New", "微软雅黑", "Microsoft Yahei", "宋体", "SimSun",
+    "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+@include media-breakpoint-up(xl) {
+  .container {
+    max-width: 1140px;
+  }
+}
