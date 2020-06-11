@@ -71,6 +71,8 @@
   color: #aaa;
 }
 #language-switcher {
+  z-index: 999999;
+  position: relative;
   background: darken($color: theme-color("primary"), $amount: 6%);
   color: white;
   border: none;
@@ -137,7 +139,7 @@
 
 .navbar-light-custom {
   background: rgba($color: white, $alpha: 0.8);
-  // top: 30px;
+  top: 38px;
 }
 #logo {
   max-height: 58px;
@@ -176,5 +178,8 @@
     .dropdown-menu {
       min-width: 10rem;
     }
+  }
+  .navbar-light-custom {
+    top: 70px;
   }
 }

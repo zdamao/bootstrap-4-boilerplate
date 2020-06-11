@@ -1,0 +1,183 @@
+.sec-01 {
+  background: url("../img//sec-01-02.jpg") no-repeat top right;
+  .content {
+    display: flex;
+    align-items: center;
+    .img-wrapper {
+      width: 200px;
+    }
+  }
+}
+.sec-02 {
+  .block {
+    position: relative;
+  }
+  .text {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    margin-top: 4rem;
+  }
+  .left-block {
+    .text {
+      right: 0;
+    }
+  }
+  .right-block {
+    .text {
+      left: 0;
+    }
+  }
+  .text.reverse {
+    color: white;
+  }
+}
+
+.sec-03 {
+  .text.sec-text {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    p {
+      color: #666666;
+      padding: 0;
+    }
+  }
+  .swiper-button-black.swiper-button-circle {
+    background: white !important;
+    border: 2px solid #cccccc;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    &:after {
+      font-size: 1rem;
+    }
+  }
+  .swiper-container {
+    width: 96%;
+    .swiper-item {
+      text-align: center;
+    }
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    .date-box {
+      width: 88px;
+      height: 66px;
+      border: 2px solid #cccccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .month {
+        position: relative;
+        font-size: smaller;
+        &:after {
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 1px;
+          display: inline-block;
+          border-bottom: 1px solid black;
+          bottom: 0;
+          left: 6px;
+        }
+      }
+      .date {
+        font-size: large;
+      }
+    }
+    p {
+      padding-left: 10px;
+    }
+  }
+}
+.sec-04 {
+  background: #efefef;
+  .card {
+    border: none;
+    border-radius: 0;
+    .card-img,
+    .card-img-top {
+      border-radius: 0 !important;
+    }
+  }
+}
+.sec-05 {
+  background-image: url("../img/sec-05-bg-01.png"),
+    url("../img/sec-05-bg-02.png");
+  background-position: top right,
+    /* this positions the first image */ bottom left; /* this positions the second image */
+  background-repeat: no-repeat; /* this applies to both images */
+  background-size: 36%;
+
+  .bs-example {
+    margin: 20px;
+  }
+  .rotate {
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(90deg); /* Firefox */
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg); /* Standard syntax */
+  }
+  #accordionQA {
+    .card-header {
+      h2 {
+        display: flex;
+        justify-content: space-between;
+        a.card-header-link {
+          .title {
+            position: relative;
+            padding-left: 42px;
+            &::before {
+              position: absolute;
+              content: "";
+              width: 38px;
+              height: 38px;
+              background: theme-color("primary") url("../img/ico-q.png")
+                no-repeat center center;
+              // background-size: 70%;
+              border-radius: 50%;
+              left: -10px;
+              top: calc(50% - 19px);
+            }
+          }
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+    }
+    .ico-wrapper {
+      width: 24px;
+      display: inline-block;
+    }
+    .ico-expandable {
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .ico-expanded {
+      transform: rotate(180deg);
+    }
+  }
+}
+/* Extra Small Devices, Phones */
+@include media-breakpoint-down(xs) {
+  .block .text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  .sec-03 {
+    .swiper-container {
+      width: 80%;
+    }
+  }
+}
