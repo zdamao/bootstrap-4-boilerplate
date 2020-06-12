@@ -73,7 +73,7 @@
 #language-switcher {
   z-index: 999999;
   position: relative;
-  background: darken($color: theme-color("primary"), $amount: 6%);
+  background: darken($color: theme-color("primary"), $amount: 8%);
   color: white;
   border: none;
   height: 38px;
@@ -85,8 +85,8 @@
   // change dropdown icon, hide the caret first
   .custom-carets {
     border-radius: 0;
-    background: darken($color: theme-color("primary"), $amount: 6%);
-    border-color: darken($color: theme-color("primary"), $amount: 6%);
+    background: darken($color: theme-color("primary"), $amount: 8%);
+    border-color: darken($color: theme-color("primary"), $amount: 8%);
     width: 100%;
     &::after {
       display: none;
@@ -165,7 +165,7 @@
     margin: 5px auto;
   }
   .top-bar-right {
-    background: darken($color: theme-color("primary"), $amount: 6%);
+    background: darken($color: theme-color("primary"), $amount: 8%);
     width: 100%;
   }
   .search-wrapper {

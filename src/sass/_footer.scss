@@ -1,0 +1,33 @@
+.page-footer {
+  .sec-wrapper {
+    background: theme-color("primary");
+  }
+  .sec-wrapper:last-child {
+    background: darken($color: theme-color("primary"), $amount: 8%);
+    p {
+      margin: 0.8rem 0;
+      font-size: small;
+    }
+  }
+  color: white;
+  a {
+    color: white;
+    font-size: small;
+  }
+  h6 {
+    opacity: 0.4;
+    font-size: medium;
+  }
+  p {
+    margin: 0;
+  }
+  .ico-social {
+    .fa {
+      font-size: 1.5rem;
+      margin-right: 0.3rem;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

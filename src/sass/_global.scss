@@ -26,7 +26,21 @@ h6 {
 .btn.focus {
   box-shadow: none !important;
 }
-
+//rm chrome focus border
+.no-focusborder:focus {
+  // outline-style: none;
+  outline: thin dotted;
+  border-radius: 50%;
+  // box-shadow: none;
+  // border-color: transparent;
+  // background-color: black;
+  // color: white;
+}
+.btn-square {
+  border-radius: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 @include media-breakpoint-up(xl) {
   .container {
     max-width: 1140px;

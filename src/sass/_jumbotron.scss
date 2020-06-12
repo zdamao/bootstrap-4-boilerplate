@@ -1,17 +1,55 @@
+.btn-jumbotron {
+  background: theme-color("primary-lighter");
+  border-radius: 3rem;
+  border: none;
+  font-size: small;
+  height: 2rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  .ico-wrapper {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    border-radius: 50%;
+    background: white;
+    .fa-plus {
+      color: theme-color("primary-lighter");
+    }
+  }
+  span {
+    margin-left: 0.7rem;
+  }
+}
 .jumbotron-with-bg-img {
   background: url("../img/banner-01.jpg") no-repeat top left;
   background-size: cover;
+  min-height: 28rem;
+  .text {
+    font-size: 1rem;
+    margin-top: 8rem;
+  }
 }
 .jumbotron-h1 {
-  font-weight: 700;
+  font-weight: 900;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 45%;
 }
 /* Extra Small Devices, Phones */
 @include media-breakpoint-down(xs) {
   .jumbotron-with-bg-img {
     background: url("../img/banner-01.jpg") no-repeat top left;
     background-size: cover;
-    background-position: bottom right;
+    background-position: 56%;
+  }
+  .jumbotron-h1 {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
   }
 }

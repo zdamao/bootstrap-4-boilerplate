@@ -16,6 +16,7 @@
     const origOffsetY = $navbar.offset().top;
     function scroll() {
       if ($(window).scrollTop() >= origOffsetY) {
+        console.log(origOffsetY);
         $navbar.addClass("fixed-top").css("top", 0);
       } else {
         $(window).width() >= 1140
@@ -30,33 +31,31 @@
       $dropdownMenuButton.text($(this).text());
       $dropdownMenuButton.val($(this).text());
     });
-    // $(".dropdown-menu a").click(function () {
-    //   $("#dropdownMenuButton").text($(this).text());
-    //   $("#dropdownMenuButton").val($(this).text());
+    $("#accordionQA").on(
+      "hide.bs.collapse show.bs.collapse",
+      ".panel-collapse",
+      function (e) {
+        let $this = $(this);
+        $this.prev().find(".ico-expandable").toggleClass("ico-expanded");
+      }
+    );
 
-    //   // $(".btn:first-child").text($(this).text());
-    //   // $(".btn:first-child").val($(this).text());
-    // });
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 20) {
+        $("#toTopBtn").fadeIn();
+      } else {
+        $("#toTopBtn").fadeOut();
+      }
+    });
+
+    $("#toTopBtn").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: 0,
+        },
+        1000
+      );
+      return false;
+    });
   });
-
-  $("#accordionQA").on(
-    "hide.bs.collapse show.bs.collapse",
-    ".panel-collapse",
-    function (e) {
-      let $this = $(this);
-      $this.prev().find(".ico-expandable").toggleClass("ico-expanded");
-    }
-  );
-  // Add minus icon for collapse element which is open by default
-  // $(".collapse.in").each(function () {
-  //   $(this).siblings(".panel-heading").find(".glyphicon").addClass("rotate");
-  // });
-  // // Toggle plus minus icon on show hide of collapse element
-  // $(".collapse")
-  //   .on("show.bs.collapse", function () {
-  //     $(this).parent().find(".glyphicon").addClass("rotate");
-  //   })
-  //   .on("hide.bs.collapse", function () {
-  //     $(this).parent().find(".glyphicon").removeClass("rotate");
-  //   });
 })(jQuery);

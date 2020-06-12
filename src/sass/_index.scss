@@ -1,11 +1,47 @@
+.sec-text {
+  .title {
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -0.5rem;
+      // width: 100%;
+      left: 46%;
+      right: 46%;
+      height: 2px;
+      background: theme-color("orange");
+    }
+  }
+}
+.more-link {
+  font-size: small;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -48px;
+    bottom: 50%;
+    width: 37px;
+    height: 7px;
+    // left: 46%;
+    // right: 46%;
+    background: url("../img/ico-arrow-link.png") no-repeat;
+    background-size: contain;
+  }
+}
 .sec-01 {
   background: url("../img//sec-01-02.jpg") no-repeat top right;
-  .content {
-    display: flex;
-    align-items: center;
-    .img-wrapper {
-      width: 200px;
-    }
+  background-size: 36%;
+  display: flex;
+  align-items: center;
+  .img-wrapper {
+    max-width: 14rem;
+  }
+  @include media-breakpoint-down(xs) {
+    background-size: 60%;
   }
 }
 .sec-02 {
@@ -16,7 +52,16 @@
     position: absolute;
     top: 0;
     width: 60%;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    .title {
+      min-height: 4rem;
+      overflow: hidden;
+    }
+    @include media-breakpoint-down(xs) {
+      .title {
+        min-height: 0;
+      }
+    }
   }
   .left-block {
     .text {
@@ -38,6 +83,22 @@
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
+    @include media-breakpoint-down(xs) {
+      align-items: center;
+    }
+    .title {
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: -0.3rem;
+        // width: 100%;
+        left: 0;
+        right: -2rem;
+        height: 2px;
+        background: theme-color("orange");
+      }
+    }
     p {
       color: #666666;
       padding: 0;
@@ -49,8 +110,12 @@
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
+    transform: translateY(-3rem);
     &:after {
       font-size: 1rem;
+    }
+    &:focus {
+      border: none;
     }
   }
   .swiper-container {
@@ -100,12 +165,32 @@
 }
 .sec-04 {
   background: #efefef;
+  .sec-text {
+    p {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .card {
     border: none;
     border-radius: 0;
+    .card-title {
+      font-size: small;
+      color: theme-color("orange");
+      margin-bottom: 0.2rem;
+    }
+    .card-text {
+      font-size: medium;
+      min-height: 3rem;
+      overflow: hidden;
+    }
     .card-img,
     .card-img-top {
       border-radius: 0 !important;
+    }
+    .card-body {
+      padding: 1rem;
     }
   }
 }
@@ -115,7 +200,7 @@
   background-position: top right,
     /* this positions the first image */ bottom left; /* this positions the second image */
   background-repeat: no-repeat; /* this applies to both images */
-  background-size: 36%;
+  background-size: 36%, 26%;
 
   .bs-example {
     margin: 20px;
@@ -127,14 +212,25 @@
     transform: rotate(90deg); /* Standard syntax */
   }
   #accordionQA {
+    .card {
+      box-shadow: 0 0 5px #b6b6b6;
+      border-radius: 12px;
+    }
     .card-header {
+      background: white;
+      border: none;
+      padding: 1rem 1.25rem;
       h2 {
         display: flex;
         justify-content: space-between;
+
         a.card-header-link {
+          display: flex;
+          align-items: center;
           .title {
             position: relative;
-            padding-left: 42px;
+            padding-left: 3.2rem;
+            font-size: medium;
             &::before {
               position: absolute;
               content: "";
@@ -144,7 +240,7 @@
                 no-repeat center center;
               // background-size: 70%;
               border-radius: 50%;
-              left: -10px;
+              left: 0;
               top: calc(50% - 19px);
             }
           }
@@ -154,13 +250,29 @@
         }
       }
     }
+    .card-body {
+      position: relative;
+      &::before {
+        content: "";
+        // width: 96%;
+        height: 1px;
+        display: inline-block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        position: absolute;
+        top: 0;
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    }
     .ico-wrapper {
       width: 24px;
+      min-width: 24px;
       display: inline-block;
     }
     .ico-expandable {
       width: 100%;
       transition: all 0.2s;
+      opacity: 0.5;
     }
     .ico-expanded {
       transform: rotate(180deg);
