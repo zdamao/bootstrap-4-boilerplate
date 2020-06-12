@@ -1,16 +1,24 @@
-$theme-colors: (
-    "primary": #ff3a52,
-    "dark": #000000
-);
-
+@import "variables";
 @import "node_modules/bootstrap/scss/bootstrap";
+//font-size font-family etc...
+@import "global";
 
-body {
-    padding-top:56px;
-}
-.footer {
-    margin-top:3rem;
-}
-.navbar {
-    border-bottom:1px solid #eee;
-}
+//components
+@import "header";
+@import "footer";
+@import "backToTop";
+
+//pages
+// index page
+@import "jumbotron";
+@import "index";
+
+// body {
+//   padding-top: 56px;
+// }
+// .footer {
+//   margin-top: 3rem;
+// }
+// .navbar {
+//   border-bottom: 1px solid #eee;
+// }

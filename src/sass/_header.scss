@@ -1,0 +1,185 @@
+// $fa_path: "../../node_modules/font-awesome/scss";
+// @import "../../node_modules/font-awesome/scss/variables.scss";
+// @import "$fa_path/mixins.scss";
+// @import "$fa_path/path.scss";
+// @import "$fa_path/core.scss";
+// @import "$fa_path/icons.scss";
+#top-bar-wrap {
+  background-color: theme-color("primary");
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+#top-bar {
+  position: relative;
+  // padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+  .ico-wrapper {
+    .ico {
+      background: url("../img/phone-receiver.png") no-repeat center left;
+      background-size: 14px;
+      padding-left: 1.2rem;
+    }
+  }
+}
+.top-bar-left {
+  float: left;
+  margin-left: 0;
+}
+.top-bar-right {
+  float: right;
+  margin-left: auto;
+  // margin: 0 auto;
+}
+#top-bar-func {
+  display: flex;
+  align-items: center;
+}
+
+/* Bootstrap 4 text input with search icon */
+.search-wrapper {
+  background: none;
+  margin: 0;
+  margin-right: 2rem;
+  .search-ipt {
+    height: calc(1.2em + 0.5rem + 2px) !important;
+    border-radius: 0;
+    background: none;
+    font-size: small;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 1.6rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+#language-switcher {
+  z-index: 999999;
+  position: relative;
+  background: darken($color: theme-color("primary"), $amount: 8%);
+  color: white;
+  border: none;
+  height: 38px;
+  width: 150px;
+  &:focus {
+    outline: none;
+    background: darken($color: theme-color("primary"), $amount: 15%);
+  }
+  // change dropdown icon, hide the caret first
+  .custom-carets {
+    border-radius: 0;
+    background: darken($color: theme-color("primary"), $amount: 8%);
+    border-color: darken($color: theme-color("primary"), $amount: 8%);
+    width: 100%;
+    &::after {
+      display: none;
+      position: relative;
+    }
+    &::before {
+      // font-family: FontAwesome;
+      content: "";
+      // content: "\f107";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/ico-arrow-down.png") no-repeat;
+      background-size: 16px;
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 8px);
+
+      // background: url("../img/ico-magnifier.png") no-repeat;
+    }
+    padding-right: 2rem;
+  }
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+    min-width: auto;
+    border-radius: 0;
+  }
+}
+
+.select button {
+  width: 100%;
+  text-align: left;
+}
+.select .caret {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+}
+.select:last-child > .btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.selected {
+  padding-right: 10px;
+}
+.option {
+  width: 100%;
+}
+
+.navbar-light-custom {
+  background: rgba($color: white, $alpha: 0.8);
+  top: 38px;
+}
+#logo {
+  max-height: 58px;
+}
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background: darken($color: theme-color("primary"), $amount: 10%);
+  border-color: darken($color: theme-color("primary"), $amount: 10%);
+}
+.btn-secondary:hover {
+  color: #fff;
+  background: darken($color: theme-color("primary"), $amount: 10%);
+  border-color: darken($color: theme-color("primary"), $amount: 10%);
+}
+/* Extra Small Devices, Phones */
+@include media-breakpoint-down(xs) {
+  .top-bar-left {
+    margin: 0 auto;
+  }
+  #top-bar-content {
+    margin: 5px auto;
+  }
+  .top-bar-right {
+    background: darken($color: theme-color("primary"), $amount: 8%);
+    width: 100%;
+  }
+  .search-wrapper {
+    margin: auto;
+  }
+  #logo {
+    max-height: 48px;
+  }
+  #language-switcher {
+    .dropdown-menu {
+      min-width: 10rem;
+    }
+  }
+  .navbar-light-custom {
+    top: 70px;
+  }
+}

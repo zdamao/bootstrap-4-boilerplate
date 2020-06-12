@@ -1,0 +1,89 @@
+// html,
+// body {
+//   font-size: $font-size-base;
+//   font-family: $font-family-base !important;
+// }
+html,
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "lucida grande", "lucida sans unicode", lucida, helvetica,
+  //   "Hiragino Sans GB", "MicrosoftYaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "华文细黑", "STXihei", "PingFang TC", "微软雅黑体",
+    "Microsoft YaHei New", "微软雅黑", "Microsoft Yahei", "宋体", "SimSun",
+    "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: none !important;
+}
+//rm chrome focus border
+.no-focusborder:focus {
+  // outline-style: none;
+  outline: thin dotted;
+  border-radius: 50%;
+  // box-shadow: none;
+  // border-color: transparent;
+  // background-color: black;
+  // color: white;
+}
+.btn-square {
+  border-radius: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.gray {
+  color: theme-color("gray");
+}
+.orange {
+  color: theme-color("orange");
+}
+.sec-text {
+  .title {
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -0.5rem;
+      // width: 100%;
+      left: 46%;
+      right: 46%;
+      height: 2px;
+      background: theme-color("orange");
+    }
+  }
+}
+.more-link {
+  font-size: small;
+  position: relative;
+  display: inline-block;
+  color: theme-color("gray");
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -48px;
+    bottom: 50%;
+    width: 37px;
+    height: 7px;
+    // left: 46%;
+    // right: 46%;
+    background: url("../img/ico-arrow-link.png") no-repeat;
+    background-size: contain;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .container {
+    max-width: 1140px;
+  }
+}

@@ -6,70 +6,543 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+        rel="stylesheet" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.2/css/swiper.min.css"
+        rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="./img/icon.png" />
         <title>Basic - Bootstrap 4 with Gulp 4</title>
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-<a class="navbar-brand" href="./index.html">Basic</a>
+        <div id="top-bar-wrap">
+            <div class="container">
+                <div id="top-bar" class="row">
+                    <div id="top-bar-content" class="top-bar-left ico-wrapper"> <span class="ico ico-phone"><span>(852) 3955 1230</span></span> <span class="ico ico-fax"><span>(852) 3565 01120</span></span>
+                    </div>
+                    <div id="top-bar-func" class="clr top-bar-right social-style-none">
+                        <!-- Actual search box -->
+                        <div class="form-group input-group-sm search-wrapper has-search"> <span class="ico-search form-control-feedback"><img src="../img/ico-magnifier.png" alt=""
+              /></span>
 
-            <button class="navbar-toggler"
-            type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
-
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
-
-                    </li>
-                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-
-                        <div class="dropdown-menu"
-                        aria-labelledby="dropdown01"> <a class="dropdown-item" href="#">Action</a>
- <a class="dropdown-item" href="#">Another action</a>
-
-                            <a
-                            class="dropdown-item" href="#">Something else here</a>
+                            <input type="text" class="form-control search-ipt"
+                            placeholder="Search..." />
                         </div>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./about.html">About</a>
+                        <div class="dropdown" id="language-switcher">
+                            <button class="btn btn-secondary dropdown-toggle custom-carets" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span>LANGUAGE:EN</span>
 
-                    </li>
-                </ul>
+                                <!-- <i class="fa fa-chevron-down"></i> -->
+                                <!-- <span class="ico-wrapper">
+                  <img src="../img/ico-arrow-down.png" alt="" />
+                </span> -->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">LANGUAGE:EN</a>
+ <a class="dropdown-item"
+                                href="#">LANGUAGE:ZH</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm fixed-top navbar-light-custom">
+            <div class="container"> <a class="navbar-brand" href="./index.html">
+          <img id="logo" src="../img/logo-xcelom.png" alt="" />
+        </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="./index.html">HOME<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">PROFILE</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">OUR TEST</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">RESOURCES</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">MABIOUNI</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">CAREER</a>
+
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">SUPPORT</a>
+
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <div class="jumbotron bg-white text-center justify-content-center align-items-center mb-0">
-            <div class="container">
-                 <h1 class="display-3">Boilerplate Bootstrap 4+  with Gulp 4 </h1>
-
-                <p class="lead">Basic is a Bootstrap 4+ boilerplate with Gulp4, cross-env, Sass, sourcemaps,
-                    concat, CSS & HTML minification, uglify, image optimization, template partials,
-                    BrowserSync.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
-                </p>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365451-d20e00c0ed23?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365437-9f9d275b0db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579033060982-1bb5b083f4fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-            </div>
-        </div>
-        <footer class="footer container text-center">
-            <p>&copy; Bootstrap Basic Starter with Gulp</p>
-        </footer>
-        <script src="js/all.js"></script>
     </body>
 
 </html>
+<div class="jumbotron justify-content-center align-items-center mb-0 jumbotron-with-bg-img">
+    <div class="container">
+        <d<img class="img-fluid" src="img/banner-01-title.png" alt="INVENTED BY HONG KONG"
+        />iv class="row">
+        <div class="text">
+             <h1 class="jumbotron-h1">
+      <div class="img-wrapper"><img class="img-fluid" src="img/banner-01-logo.png" alt="logo" /></div>
+      <div class="img-wrapper ml-md-2"><img class="img-fluid" src="img/banner-01-title-02.png" alt="INVENTED BY HONG KONG" /></div>
+    </h1>
+
+            <p class="lead">Non-Invasive Analysis of Fetal DNA for Prenatal Screening</p> <a class="btn btn-primary  btn-jumbotron"
+            href="#" role="button"><div class="ico-wrapper"><i class="fa fa-plus" aria-hidden="true"></i></div><span>MORE</span></a>
+
+        </div>
+    </div>
+</div>
+</div>
+<div class="sec-01 p-lg-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 col-8 offset-2 offset-md-2">
+                <div class="img-wrapper mt-5 mb-4">
+                    <img class="img-fluid" src="img/sec-01-01.png" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="text">
+                     <h2 class="title">Who <span class="orange">We</span> Are</h2>
+
+                    <p class="gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p> <a class="more-link mb-3" href="javascript:void(0);">MORE</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sec-02 pt-lg-5 pb-lg-5 container-fluid">
+    <div class="row">
+        <div class="block left-block col-md-6 p-0">
+            <div class="img-wrapper">
+                <img class="img-fluid" src="img/sec-02-01.jpg" alt="">
+            </div>
+            <div class="text reverse p-2 p-md-5">
+                 <h2 class="title mt-3 mt-md-0">SafeT21 express</h2>
+
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p> <a class="btn btn-outline-light btn-square"
+                href="javascript:void(0);">DISCOVER</a>
+
+            </div>
+        </div>
+        <div class="block right-block col-md-6 p-0">
+            <div class="img-wrapper">
+                <img class="img-fluid" src="img/sec-02-02.jpg" alt="">
+            </div>
+            <div class="text p-2 p-md-5">
+                 <h2 class="title">Fragile X Syndrome Carrier Screening</h2>
+
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p> <a class="btn btn-outline-dark btn-square"
+                href="javascript:void(0);">DISCOVER</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sec-03 pt-lg-5 pb-lg-5">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-3 col-12">
+                <div class="text sec-text">
+                     <h2 class="title mt-1 mt-md-0">Events</h2>
+
+                    <p class="mt-2 mt-md-3">We hold free talk for pregnant woman regularly</p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <!-- Swiper -->
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-black swiper-button-circle no-focusborder"></div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="img/sec-03-01.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="date-box mb-4">
+                                    <div class="month">Jan</div>
+                                    <div class="date">27</div>
+                                </div>
+                                <p>Duis aute irure dolor in reprehenderit</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="img/sec-03-02.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="date-box">
+                                    <div class="month">Jan</div>
+                                    <div class="date">27</div>
+                                </div>
+                                <p>Duis aute irure dolor in reprehenderit</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="img/sec-03-03.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="date-box">
+                                    <div class="month">Jan</div>
+                                    <div class="date">27</div>
+                                </div>
+                                <p>Duis aute irure dolor in reprehenderit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-black swiper-button-circle no-focusborder"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sec-04 pt-4 pt-md-5 pb-md-5 ">
+    <div class="text sec-text text-center">
+         <h2 class="title">Public Media</h2>
+
+        <p class="mt-3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor. Ut enim ad minim veniam,incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3 mb-md-0">
+                    <img class="card-img-top" src="img/sec-04-01.jpg" alt="Card image cap">
+                    <div class="card-body">
+                         <h5 class="card-title">25/02/2020</h5>
+
+                        <p class="card-text">Sint occaecat cupidatat</p> <a class="more-link" href="javascript:void(0);">READ MORE</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 mb-md-0">
+                    <img class="card-img-top" src="img/sec-04-02.jpg" alt="Card image cap">
+                    <div class="card-body">
+                         <h5 class="card-title">25/02/2020</h5>
+
+                        <p class="card-text">Culpa qui officia deserunt mollit anim id est laborum</p> <a class="more-link"
+                        href="javascript:void(0);">READ MORE</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 mb-md-0">
+                    <img class="card-img-top" src="img/sec-04-03.jpg" alt="Card image cap">
+                    <div class="card-body">
+                         <h5 class="card-title">25/02/2020</h5>
+
+                        <p class="card-text">Sint occaecat cupidatat</p> <a class="more-link" href="javascript:void(0);">READ MORE</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sec-05 pt-4 pb-4">
+    <div class="text sec-text text-center">
+         <h2 class="title mt-0 mb-4 mt-md-4 mb-md-5">FAQs</h2>
+
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="accordion w-100" id="accordionQA">
+                    <div class="card mb-3 mb-md-4">
+                        <div class="card-header" id="headingOne">
+                             <h2 class="mb-0">
+                  <a href="javascript:void(0);" class="card-header-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="title">What are the advantages of having our prenatal test?</span>
+                    <span class="ico-wrapper">
+                      <img class="img-fluid ico-expandable ico-expanded" src="img/ico-arrow-down-gray.png" alt="">
+                    </span>
+                  </a>
+                </h2>
+
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionQA">
+                            <div class="card-body">Maecenas facilisis tortor ut velit feugiat laoreet. Donec tempus, nulla
+                                eu porta ullamcorper, velit nibh sagittis dolor, at viverra orci dui sed
+                                mi. Vestibulum varius odio libero, quis vulputate massa varius eget. Pellentesque
+                                lobortis malesuada lorem. Etiam neque nisi, sollicitudin non risus sit
+                                amet, placerat elementum nisl. Aenean viverra tellus ac neque pulvinar,
+                                sed vulputate metus tempor.</div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mb-md-4">
+                        <div class="card-header" id="headingTwo">
+                             <h2 class="mb-0">
+                  <a href="javascript:void(0);" class="card-header-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="title">Who are eligible to do our safeT21expressTM? </span>
+                    <span class="ico-wrapper">
+                      <img class="img-fluid ico-expandable" src="img/ico-arrow-down-gray.png" alt="">
+                    </span>
+                  </a>
+                </h2>
+
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionQA">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                                VHS.</div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mb-md-4">
+                        <div class="card-header" id="headingTwo">
+                             <h2 class="mb-0">
+                  <a href="javascript:void(0);" class="card-header-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="title">How can I order the test from Xcelom and how much will that cost?</span>
+                    <span class="ico-wrapper">
+                      <img class="img-fluid ico-expandable" src="img/ico-arrow-down-gray.png" alt="">
+                    </span>
+                  </a>
+                </h2>
+
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionQA">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                                VHS.</div>
+                        </div>
+                    </div>
+                    <div class="card mb-md-4">
+                        <div class="card-header" id="headingOne">
+                             <h2 class="mb-0">
+                  <a href="javascript:void(0);" class="card-header-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="title">How will I receive my test report?</span>
+                    <span class="ico-wrapper">
+                      <img class="img-fluid ico-expandable" src="img/ico-arrow-down-gray.png" alt="">
+                    </span>
+                  </a>
+                </h2>
+
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionQA">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                                synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                                VHS.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer font-small mdb-color pt-4">
+    <div class="sec-wrapper pt-4">
+        <div class="container">
+            <div class="row row-01">
+                <div class="col-md-8 col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                 <h6>Profile</h6>
+
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:void(0);">About Xcelom</a>
+
+                                    </li>
+                                    <li><a href="javascript:void(0);">Public media</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                 <h6>Profile</h6>
+
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:void(0);">Genetic test</a>
+
+                                    </li>
+                                    <li><a href="javascript:void(0);">Clinical Biochemistry</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                 <h6>Profile</h6>
+
+                                <ul class="list-unstyled">
+                                    <li> <a href="javascript:void(0);">NIPT</a>
+
+                                    </li>
+                                    <li> <a href="javascript:void(0);">Carrier Screen</a>
+
+                                    </li>
+                                    <li> <a href="javascript:void(0);">Library</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row mt-lg-5">
+                            <div class="col-4">
+                                 <h6>Mabiouni</h6>
+
+                                <ul class="list-unstyled">
+                                    <li> <a href="javascript:void(0);">About</a>
+
+                                    </li>
+                                    <li> <a href="javascript:void(0);">Events</a>
+
+                                    </li>
+                                    <li> <a href="javascript:void(0);">Member</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                 <h6>Support</h6>
+
+                                <ul class="list-unstyled">
+                                    <li> <a href="javascript:void(0);">FAQs</a>
+
+                                    </li>
+                                    <li> <a href="javascript:void(0);">Contact Us</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                 <h6>Follow Us</h6>
+
+                                <div class="ico-social"> <a href="javascript:void(0);"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+
+                                    <a
+                                    href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i>
+
+                                        </a> <a href="javascript:void(0);"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+
+                                        <a
+                                        href="javascript:void(0);"><i class="fa fa-youtube-square" aria-hidden="true"></i>
+
+                                            </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 col-contact">
+                    <div class="inner pl-3 pl-md-0">
+                         <h6>Contact</h6>
+
+                        <ul class="list-unstyled fa-ul">
+                            <li><i class="fa fa-phone fa-li" aria-hidden="true"></i>
+ <span>(852) 3955 1230</span>
+
+                            </li>
+                            <li><i class="fa fa-fax fa-li" aria-hidden="true"></i>
+ <span>(852) 3565 0112</span>
+
+                            </li>
+                            <li><i class="fa fa-envelope fa-li" aria-hidden="true"></i>
+ <span>contact.us@xcelom.com</span>
+
+                            </li>
+                            <li><i class="fa fa-map-marker fa-li" aria-hidden="true"></i>
+ <span>10/F, Metropole Square, No.2 On Yiu Street, Sha Tin, N.T. H.K. </span>
+
+                            </li>
+                        </ul>
+                        <div class="img-wrapper  mb-4">
+                            <img class="img-fluid" src="../img/sec-06-map.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <p>Copyright © Xcelom Limited</p>
+                </div>
+                <div class="col-4">
+                    <p>Powered by BINGO(HK).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- back to page top --> <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+data-abc="true"></a>
+
+<script src="js/all.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.2/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        //stop propagation for confilcat with navbar scroll event
+        touchMoveStopPropagation : false,
+        autoplay:true,
+        loop: true,
+        breakpoints: {
+        // when window width is <= 499px
+        499: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 30
+        },
+        // when window width is <= 1024px
+        1024: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 60,
+            spaceBetween: 30,
+        }
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+         },
+    });
+</script>
+</body>
+
+</html>
+</div>
+</div>
